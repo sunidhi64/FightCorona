@@ -1,16 +1,24 @@
 package com.example.fightcorona;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.firebase.client.Firebase;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
     ViewFlipper view_f;
 
     Firebase myfirebase;
+    FirebaseAuth myfirebaseAuth;
+    EditText email, password;
+    Button register;
+    String myemail, mypassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Firebase.setAndroidContext(this);
+        myfirebase = new Firebase("https://fightcorona-f189e.firebaseio.com");
 
         TextView awareness = (TextView) findViewById(R.id.awareness);
         awareness.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +64,39 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(mythIntent);
             }
 
+        });
+
+        email = (EditText) findViewById(R.id.email);
+        password = (EditText) findViewById(R.id.password);
+        register = (Button) findViewById(R.id.register);
+        myfirebaseAuth.getInstance();
+
+
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myemail = email.getText().toString();
+                mypassword = password.getText().toString();
+                CreatNewUser();
+
+            }
+        });
+
+    }
+
+    private void CreatNewUser() {
+        myfirebaseAuth.createUserWithEmailAndPassword(myemail, mypassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    Intent symptoms = new Intent(MainActivity.this, SymptomTracker.class);
+                    startActivity(symptoms);
+                }
+                else {
+                    Toast.makeText(MainActivity.this, "Registeration failed", Toast.LENGTH_SHORT).show();
+                }
+            }
         });
     }
 
