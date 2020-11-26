@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,25 +26,31 @@ public class MainActivity extends AppCompatActivity {
 
     ViewFlipper view_f;
 
-    Firebase myfirebase;
     FirebaseAuth myfirebaseAuth;
     EditText email, password;
     Button register;
+    Button createAccount;
     String myemail, mypassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Firebase.setAndroidContext(this);
         setContentView(R.layout.activity_main);
+        myfirebaseAuth = FirebaseAuth.getInstance();
+
+        if (myfirebaseAuth.getCurrentUser() != null) {
+            Intent symptoms = new Intent(MainActivity.this, SymptomTracker.class);
+            startActivity(symptoms);
+            finish();
+        }
+
         int images[] = {R.drawable.corona, R.drawable.corona1, R.drawable.corona2};
         view_f = findViewById(R.id.view_flipper);
 
         for (int image: images) {
             flipperImage(image);
         }
-
-        Firebase.setAndroidContext(this);
-        myfirebase = new Firebase("https://fightcorona-f189e.firebaseio.com");
 
         TextView awareness = (TextView) findViewById(R.id.awareness);
         awareness.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         register = (Button) findViewById(R.id.register);
-        myfirebaseAuth.getInstance();
+        createAccount = (Button) findViewById(R.id.create_account);
+
 
 
 
@@ -78,10 +86,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 myemail = email.getText().toString();
                 mypassword = password.getText().toString();
+                Log.i(String.valueOf(register), "chal raha hai?");
                 CreatNewUser();
+
 
             }
         });
+
+        createAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newAccount = new Intent(MainActivity.this, Login.class);
+                startActivity(newAccount);
+            }
+        });
+
+
 
     }
 
@@ -92,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     Intent symptoms = new Intent(MainActivity.this, SymptomTracker.class);
                     startActivity(symptoms);
+                    finish();
                 }
                 else {
                     Toast.makeText(MainActivity.this, "Registeration failed", Toast.LENGTH_SHORT).show();

@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FightCorona">
         <activity
+            android:name=".Login"
+            android:label="Login"/>
+        <activity
             android:name=".SymptomTracker"
             android:label="Symptoms"/>
         <activity

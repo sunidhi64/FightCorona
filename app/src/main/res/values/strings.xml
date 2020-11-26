@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Fight Corona</string>
     <string name="register"><u>Register</u>.</string>
+    <string-array name="awareness">
+    <item>What is Corona Virus</item>
+    <item>How does it spread</item>
+    <item>Ways to prevent it</item>
+    <item>Methods used by Doctors</item>
+    </string-array>
+    <string name="para_about">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.</string>
+    <string name="para_about1">Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.
+                             Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.</string>
+    <string name="spread">The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).</string>
 </resources>
