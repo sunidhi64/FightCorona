@@ -102,8 +102,16 @@
         android:layout_height="wrap_content"
         android:text="Already have an account"
         android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
         android:layout_gravity="center_horizontal"/>
 
+    <TextView
+        android:id="@+id/daily_cases"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dailyCases"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"/>
 
 
 

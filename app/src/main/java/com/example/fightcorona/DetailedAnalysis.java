@@ -126,7 +126,7 @@ public class DetailedAnalysis extends AppCompatActivity {
             }
             }
         });
-        logout = findViewById(R.id.logout1);
+        logout = findViewById(R.id.logout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

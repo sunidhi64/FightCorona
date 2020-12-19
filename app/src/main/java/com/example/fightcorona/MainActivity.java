@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -99,6 +100,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        TextView cases = findViewById(R.id.daily_cases);
+        cases.setMovementMethod(LinkMovementMethod.getInstance());
+
 
 
     }
@@ -113,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                     //finish();
                 }
                 else {
-                    Toast.makeText(MainActivity.this, "Registeration failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Registration failed", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -46,6 +46,7 @@ They are ANTIVIRALS that can reduce the effect of corona virus. By using these t
     <string name="antibiotics">Antibiotics CANNOT prevent or treat COVID-19. Antibiotics work only against bacteria, not viruses. COVID-19 is caused by a virus, and therefore antibiotics should not be used for prevention or treatment. However, if you are hospitalized for COVID-19, you may receive antibiotics because bacterial co-infection is possible.</string>
     <string name="alertmsg">*Take care of yourself \n Please be isolated in one room to protect other family members from covid19.</string>
     <string name="alertMsg1">*Take care of yourself</string>
+    <string name="dailyCases"><a href="https://covidindia.org/">Daily Covid Cases</a></string>
 
 
 </resources>
