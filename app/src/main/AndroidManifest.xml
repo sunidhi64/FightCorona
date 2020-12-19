@@ -22,6 +22,21 @@
         <activity
             android:name=".Awareness"
             android:label="Awareness"/>
+        <activity
+            android:name=".TestedPositive"
+            android:label="Tested"/>
+        <activity
+            android:name=".TestedNegative"
+            android:label="Not a Covid Patient"/>
+        <activity
+            android:name=".DailyUpdates"
+            android:label="Updates"/>
+        <activity
+            android:name=".DetailedAnalysis"
+            android:label="DetailedAnalysis"/>
+        <activity
+            android:name=".Analysis"
+            android:label="DetailedAnalysis"/>
 
         <activity android:name=".MainActivity">
             <intent-filter>

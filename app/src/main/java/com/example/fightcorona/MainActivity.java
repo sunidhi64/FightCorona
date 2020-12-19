@@ -42,10 +42,9 @@ public class MainActivity extends AppCompatActivity {
         if (myfirebaseAuth.getCurrentUser() != null) {
             Intent symptoms = new Intent(MainActivity.this, SymptomTracker.class);
             startActivity(symptoms);
-            finish();
         }
 
-        int images[] = {R.drawable.corona, R.drawable.corona1, R.drawable.corona2};
+        int images[] = {R.drawable.corona, R.drawable.cc, R.drawable.corona2};
         view_f = findViewById(R.id.view_flipper);
 
         for (int image: images) {
@@ -86,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 myemail = email.getText().toString();
                 mypassword = password.getText().toString();
-                Log.i(String.valueOf(register), "chal raha hai?");
                 CreatNewUser();
 
 
@@ -112,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     Intent symptoms = new Intent(MainActivity.this, SymptomTracker.class);
                     startActivity(symptoms);
-                    finish();
+                    //finish();
                 }
                 else {
                     Toast.makeText(MainActivity.this, "Registeration failed", Toast.LENGTH_SHORT).show();
