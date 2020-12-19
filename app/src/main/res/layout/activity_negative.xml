@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Any close relative tested positive recently?"
+        android:textColor="@color/black"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:textSize="18sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Please note temperature and oxygen are compulsory field"
+        android:textColor="#FF3D00"
+        android:textSize="15sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Record your today`s symptoms"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/temperatur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Record your Temperature"
+        android:inputType="numberDecimal"/>
+    <EditText
+        android:id="@+id/oxyge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your Oxygen Level (spO2)"
+        android:inputType="number"/>
+    <CheckBox
+        android:id="@+id/coug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dry cough or Sore Throat" />
+
+    <CheckBox
+        android:id="@+id/pai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Body Pain" />
+    <CheckBox
+        android:id="@+id/nos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nasal Congestion" />
+    <CheckBox
+        android:id="@+id/headach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Headache" />
+    <CheckBox
+        android:id="@+id/diarrhe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diarrhea" />
+    <CheckBox
+        android:id="@+id/los"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loss of taste or smell"
+        android:layout_marginBottom="20dp"/>
+    <Button
+        android:id="@+id/ente"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Submit" />
+
+</LinearLayout>
+</ScrollView>

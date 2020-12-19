@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "66888658375",
+    "firebase_url": "https://fightcorona-f189e.firebaseio.com",
+    "project_id": "fightcorona-f189e",
+    "storage_bucket": "fightcorona-f189e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66888658375:android:32e3aed35244cb8a623de2",
+        "android_client_info": {
+          "package_name": "com.example.fightcorona"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66888658375-ot1m6ur04kprh24rcbld657nmej88sk8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaDE-83vAalM3PEX8e5tyEcVCslkqik7Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66888658375-ot1m6ur04kprh24rcbld657nmej88sk8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

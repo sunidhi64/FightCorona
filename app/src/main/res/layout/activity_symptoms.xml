@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fight"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:text="Are you"
+        android:textSize="40sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+         />
+    <Button
+        android:id="@+id/positive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Covid Patient"
+        android:textSize="25sp"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/negative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Not a Covid Patient"
+        android:textSize="25sp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal" />
+
+
+
+</LinearLayout>

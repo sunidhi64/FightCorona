@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Note: Day 9 and 10 are important as situation can either worsen or get better"
+        android:justificationMode="inter_word"
+        android:layout_marginBottom="20dp"
+        android:textColor="#FF3D00"
+        android:textSize="20sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Record your today`s symptoms"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Please note temperature and oxygen are compulsory field"
+        android:textColor="#FF3D00"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Record your Temperature"
+        android:inputType="numberDecimal"/>
+    <EditText
+        android:id="@+id/oxygen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your Oxygen Level (spO2)"
+        android:inputType="number"/>
+    <CheckBox
+        android:id="@+id/cough"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dry cough or Sore Throat" />
+    <CheckBox
+        android:id="@+id/pain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Body Pain" />
+    <CheckBox
+        android:id="@+id/nose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nasal Congestion" />
+    <CheckBox
+        android:id="@+id/headache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Headache" />
+    <CheckBox
+        android:id="@+id/diarrhea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diarrhea" />
+    <CheckBox
+        android:id="@+id/loss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loss of taste or smell"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Do you have medical history of"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/diabetes"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Diabetes" />
+        <CheckBox
+            android:id="@+id/asthama"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Asthama" />
+        <CheckBox
+            android:id="@+id/bp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Blood Pressure" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Submit" />
+
+
+
+</LinearLayout>
+</ScrollView>
